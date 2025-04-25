@@ -1,0 +1,172 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #000000;
+}
+
+header {
+  background-color: #506b99;
+  color: white;
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.gear-img {
+    width: 100px;
+    position: relative;
+    left: -60px; 
+    animation: spin 4s linear infinite;
+  }
+  
+.whistle-img {
+    width: 70px;
+    margin-top: 10px;
+    animation: swing 0.5s ease-in-out infinite alternate;
+    margin-left: 200px;
+  }
+
+@keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+@keyframes swing {
+    0% {
+      transform: rotate(20deg);
+    }
+    100% {
+      transform: rotate(-5deg);
+    }
+  }
+
+.introduction, .contact {
+  padding: 2rem;
+  text-align: center;
+}
+
+.introduction img, .skill img, .hobby img {
+  width: 300px;
+  border-radius: 80%;
+  
+}
+
+.introduction h2 {
+    font-size: 3rem;
+    font-family: 'Sacramento', cursive;
+    color: #506b99;
+    margin-bottom: 10px;
+  }
+
+.skill, .hobby {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 30px;
+    margin-bottom: 60px;
+    flex-direction: row; 
+    text-align: left;   
+  }
+  
+
+.skills-hobbies {
+    max-width: 900px;
+    margin: 100px auto;
+    padding: 0 20px;
+    text-align: left;
+  }
+  
+.skills-hobbies h2 {
+    text-align: center;
+    color: #1ba090;
+    font-size: 2.5rem;
+    margin-bottom: 60px;
+  }
+
+.skill img, .hobby img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+.skill .text h3, .hobby .text h3 {
+    color: #1ba090;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+.skill .text p, .hobby .text p {
+    font-size: 1rem;
+    color: #2a2727;
+  }
+
+.hobby {
+    flex-direction: row-reverse; /* תמונה מימין, טקסט משמאל */
+  }
+
+
+@media (max-width: 768px) {       
+    .skill, .hobby {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .skill img, .hobby img {
+      margin-bottom: 20px;
+    }
+  
+    .skill .text, .hobby .text {
+      padding: 0 10px;
+    }
+  }
+
+
+.contact a {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #506b99;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  text-align: center;
+
+}
+
+.contact a.mailto:hover{
+    color: #1ba090;
+    background-color: #505255;
+}
+
+footer {
+  background-color: #505255;
+  color: white;
+  text-align: center;
+  padding: 0.5rem;
+}
+
+footer a.linkedin-link {
+    color: white;
+    text-decoration: underline;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+  }
+  
+footer a.linkedin-link:hover {
+    color: #0e76a8; 
+  }
+
+  hr {
+    border-top: 8px dotted #1ba090;
+    width: 100px;
+    margin: 60px auto;
+  }
