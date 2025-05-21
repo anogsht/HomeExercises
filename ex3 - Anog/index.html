@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alien Invasion</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <h1 id="main-title" class="animate-title">👽 פלישת החייזרים 👽</h1>
+    <button id="play-music-btn" style="display:none;">מוזיקת פלישת חייזרים</button>
+
+  <!--ALIENS-->
+  <div class="aliens-container">
+    <img src="images/alien1.png" alt="Alien 1" class="alien" data-sound="alien1.mp3" />
+    <img src="images/alien2.png" alt="Alien 2" class="alien" data-sound="alien2.mp3" />
+    <img src="images/alien3.png" alt="Alien 3" class="alien" data-sound="alien3.mp3" />
+    <img src="images/alien4.png" alt="Alien 4" class="alien" data-sound="alien4.mp3" />
+    <img src="images/alien5.png" alt="Alien 5" class="alien" data-sound="alien5.mp3" />
+    <img src="images/alien6.png" alt="Alien 6" class="alien" data-sound="alien6.mp3" />
+    <img src="images/alien7.png" alt="Alien 7" class="alien" data-sound="alien7.mp3" />
+  </div>
+
+  <!-- BACKGOURD SOUND-->
+  <audio id="bg-music" src="sounds/background.mp3" autoplay></audio>
+
+  <video id="bg-video" autoplay muted loop playsinline>
+    <source src="video/ufo_flight.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- JS-->
+  <script src="script.js" defer></script>
+</body>
+<footer>
+    <h3>CHAT GPT created all the sounds, images and background video</h3>
+</footer>
+</html>

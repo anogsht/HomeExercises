@@ -1,0 +1,130 @@
+/*general */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: radial-gradient(circle at center, #0d0d1a 0%, #000010 100%);
+  color: #00ffcc;
+  text-align: center;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* headline */
+h1 {
+  margin: 30px 0;
+  font-size: 3em;
+  letter-spacing: 2px;
+  text-shadow: 0 0 8px #00ffe0, 0 0 16px #00ffff;
+  animation: flicker 2s infinite alternate;
+}
+
+/* aliens block */
+.aliens-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    padding: 60px 20px;
+    flex-wrap: wrap; /* keep all aliens on one row */
+    overflow-x: auto;  /* allow horizontal scroll if screen is too small */
+  }
+  
+.alien {
+   flex: 0 0 22%;
+   width: 120px;
+   height: 140px;
+   object-fit: cover; /* fully cover container */
+   object-position: center; 
+   cursor: pointer;
+   padding: 0;
+   border-radius: 20px;
+   background-color: #0f0f1a;
+   box-shadow: 0 0 15px #00ffcc88, 0 0 30px #00ffe066 inset;
+   transition: transform 0.3s ease, box-shadow 0.3s ease;
+ }
+  
+
+.alien:hover {
+  transform: scale(1.15) rotate(3deg);
+  box-shadow: 0 0 25px #00fff088, 0 0 40px #00ffff inset;
+  background: linear-gradient(145deg, #222244, #10102a);
+}
+
+/* responsive */
+@media (max-width: 600px) {
+  .alien {
+    width: 120px; 
+    max-width: 120px;
+    flex: 0 0 45%;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+}
+
+/* headline animation */
+@keyframes flicker {
+  0% { opacity: 0.9; text-shadow: 0 0 8px #00ffe0, 0 0 16px #00ffff; }
+  100% { opacity: 1; text-shadow: 0 0 12px #00ffff, 0 0 24px #00ffff; }
+}
+
+@keyframes shake {
+    0% { transform: translate(0, 0) rotate(0); }
+    20% { transform: translate(2px, -2px) rotate(-1deg); }
+    40% { transform: translate(-2px, 2px) rotate(1deg); }
+    60% { transform: translate(2px, 2px) rotate(0); }
+    80% { transform: translate(-2px, -2px) rotate(-1deg); }
+    100% { transform: translate(0, 0) rotate(0); }
+  }
+  
+  .shake {
+    animation: shake 0.3s ease;
+  }
+
+  @keyframes fadeInZoom {
+    0% {
+      opacity: 0;
+      transform: scale(0.5);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  .animate-title {
+    animation: fadeInZoom 2.5s ease-out forwards;
+  }
+  
+  #play-music-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    background-color: #00ffcc;
+    color: #000010;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 0 10px #00ffe0;
+    transition: transform 0.2s ease;
+  }
+  
+  #play-music-btn:hover {
+    transform: scale(1.05);
+  }
+  
+  
+#bg-video {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100vw;
+   height: 100vh;
+   object-fit: cover;        /* fill entire screen */
+   z-index: -1;              /* stay behind all other content */
+   opacity: 0.3;             /* subtle appearance */
+   pointer-events: none;     /* don’t block clicks */
+ }
+  
